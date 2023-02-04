@@ -3,12 +3,6 @@ from wtforms import StringField, FloatField, validators, TextAreaField, SelectFi
 from wtforms.validators import InputRequired, Length, NumberRange, URL, Optional
 
 
-# class AddPetForm(FlaskForm):
-#     name = StringField("Pet Name", [validators.InputRequired()])
-#     species = SelectField("Species",choices=[('cat', 'Cat'), ('dog', 'Dog'), ('porcupine', 'Porcupine')])
-#     photo_url = StringField("Photo", [validators.URL(message="Invalid URL"),validators.Optional()])
-#     age = FloatField("Pet age", [validators.Optional(), validators.NumberRange(min=0, max=30,message="Age must be between 0-30")])
-#     notes = TextAreaField("Notes", [validators.Optional()])
 class AddPetForm(FlaskForm):
     name = StringField("Pet Name", validators= [InputRequired()])
     species = SelectField("Species",choices=[('cat', 'Cat'), ('dog', 'Dog'), ('porcupine', 'Porcupine')])
